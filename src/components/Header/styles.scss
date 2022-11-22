@@ -1,0 +1,53 @@
+header.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+
+  .logo {
+    &__container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      height: 2rem;
+      background: #17092c;
+    }
+
+    &__name {
+      font-weight: 500;
+      font-size: 0.875rem;
+      line-height: 1.25rem;
+      color: #fff;
+    }
+  }
+
+  .userActions {
+    &__list {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+      list-style: none;
+    }
+
+    &__item {
+      line-height: 0;
+    }
+
+    &__link {
+      display: flex;
+      align-items: center;
+      gap: .5rem;
+      text-decoration: none;
+    }
+
+    .userName {
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 20px;
+      color: #fff;
+      text-decoration: none;
+    }
+  }
+}
