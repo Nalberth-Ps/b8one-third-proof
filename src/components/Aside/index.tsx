@@ -1,4 +1,5 @@
 import React from 'react';
+import { NavItem } from './NavItem';
 import './styles.scss'
 
 const options = [
@@ -39,6 +40,7 @@ const options = [
         />
       </svg>
     ),
+    hasChildren: false,
   },
 ];
 
@@ -47,11 +49,13 @@ export const Aside = () => {
     <aside className="aside__content">
       <nav className="navbar">
         <ul className="navbar__list">
-          {options.map(({ name, icon }) => (
-            <li className="navbar__item" key={name}>
-              <div className="iconWrapper">{icon}</div>
-              <p className="itemName">{name}</p>
-            </li>
+          {options.map(({ name, icon, hasChildren }) => (
+            <NavItem 
+              key={name}
+              name={name}
+              icon={icon}
+              hasChildren={hasChildren}
+            />
           ))}
         </ul>
       </nav>
