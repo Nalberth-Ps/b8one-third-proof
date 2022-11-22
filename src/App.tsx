@@ -1,5 +1,6 @@
 import { ApolloProvider } from "@apollo/client";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
+import AuthenticationContextProvider from "./context/AuthenticationContext";
 import { client } from "./graphql/client";
 import { AuthPage } from "./pages/auth";
 import { Dashboard } from "./pages/dashboard";
@@ -10,6 +11,7 @@ function App() {
   return (
     <ApolloProvider client={client}>
       <BrowserRouter>
+        <AuthenticationContextProvider>
           <Switch>
             <Route exact path="/">
               <AuthPage />
@@ -18,6 +20,7 @@ function App() {
               <Dashboard />
             </Route>
           </Switch>
+        </AuthenticationContextProvider>
       </BrowserRouter>
     </ApolloProvider>
   );
