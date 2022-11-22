@@ -1,9 +1,15 @@
-import { useMutation } from '@apollo/client';
+// Dependencies
 import React, { useState } from 'react';
-import { SIGN_IN } from '../../graphql/mutations';
-import { SignIn, UserToken } from '../typings/auth';
+import { useMutation } from '@apollo/client';
 import { useLocalStorage } from 'usehooks-ts'
 
+// Mutations
+import { SIGN_IN } from '../../graphql/mutations';
+
+//Typings
+import { SignIn, UserToken } from '../typings/auth';
+
+// Styles
 import './styles.scss';
 
 export const AuthPage = () => {
