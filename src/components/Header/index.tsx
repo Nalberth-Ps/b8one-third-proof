@@ -1,9 +1,12 @@
 import React from 'react';
+import { useAuth } from '../../context/AuthenticationContext';
 import { UserIcon } from './Icons/User';
 import { HeaderLogo } from './Logo';
 import './styles.scss';
 
 export const Header = () => {
+  const { userData } = useAuth();
+
   return (
     <header className="header">
       <div className="logo__container">
@@ -60,7 +63,7 @@ export const Header = () => {
           <li className="userActions__item">
             <a href="#" className="userActions__link">
               <UserIcon />
-              <span className="userName">Gustavo Silva</span>
+              <span className="userName">{userData?.user?.name}</span>
             </a>
           </li>
         </ul>
