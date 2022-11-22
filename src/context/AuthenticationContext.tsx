@@ -24,8 +24,9 @@ export const useAuth = () => {
   const { userData, setUserData } = useContext(AuthenticationContext);
 
   const isAuthenticated = !!userData?.token;
+	const { token, user: { email, name } } = userData;
 
-  return { userData, setUserData, isAuthenticated };
+  return { token, email, name, isAuthenticated, setUserData };
 };
 
 export default AuthenticationContextProvider;
