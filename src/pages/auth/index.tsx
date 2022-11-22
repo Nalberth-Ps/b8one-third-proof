@@ -18,10 +18,12 @@ import './styles.scss';
 export const AuthPage = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const { setUserData } = useAuth();
+  const { setUserData, isAuthenticated } = useAuth();
   const history = useHistory();
 
   const [signIn, { data, error }] = useMutation<{ signIn: UserToken }, { input: SignIn }>(SIGN_IN);
+
+  if (isAuthenticated) history.push('/dashboard');
 
   const handleSubmit = async (event: React.SyntheticEvent) => {
     event.preventDefault();
