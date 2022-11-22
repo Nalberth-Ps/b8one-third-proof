@@ -8,6 +8,7 @@ import { useAuth } from '../../context/AuthenticationContext';
 // Components
 import { Aside, Header } from '../../components';
 import { HelloMessage } from './components/HelloMessage';
+import { CompanyDashboard } from './components/CompanyDashboard';
 
 // Styles
 import './styles.scss';
@@ -26,6 +27,7 @@ export const Dashboard = () => {
         <Aside />
         <main>
           <HelloMessage />
+          <CompanyDashboard />
         </main>
       </div>
     </>
