@@ -8,7 +8,7 @@ export const DashboardType = () => {
     <div className="dashboardType">
       <ul className="dashboardType__list">
         <li className="dashboardType__item">
-          <input type="radio" name="dashboardType" id="receita" />
+          <input type="radio" name="dashboardType" id="receita" checked/>
           <label htmlFor="receita">Receita</label>
         </li>
         <li className="dashboardType__item">
