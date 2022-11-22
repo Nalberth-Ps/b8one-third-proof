@@ -4,5 +4,35 @@ section.dashboard {
   gap: 2rem;
   padding: 1.5rem;
   background: #ffffff;
-  border-radius: .3125rem;
+  border-radius: 0.3125rem;
+
+  .dataPeriod {
+    font-weight: 700;
+    font-size: 0.6875rem;
+    line-height: 1rem;
+    letter-spacing: -0.005em;
+    color: #333333;
+
+    &--highlight {
+      color: #2e046d;
+    }
+  }
+
+  .totalRevenue {
+    &Container {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin: 2rem 0 0;
+    }
+
+    &Info {
+      font-weight: 700;
+      font-size: 14px;
+      line-height: 20px;
+      letter-spacing: -0.001em;
+      color: #333333;
+      max-width: 15.625rem;
+    }
+  }
 }
