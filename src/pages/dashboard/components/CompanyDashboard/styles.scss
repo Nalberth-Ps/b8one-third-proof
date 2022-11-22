@@ -1,4 +1,7 @@
 section.dashboard {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
   padding: 1.5rem;
   background: #ffffff;
   border-radius: .3125rem;
