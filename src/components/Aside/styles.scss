@@ -1,6 +1,6 @@
 aside.aside__content {
-  max-width: 15.25rem;
   padding: 1rem;
+  background: #fff;
 
   .navbar {
     &__list {
@@ -17,10 +17,12 @@ aside.aside__content {
       padding: .75rem;
       width: 13.25rem;
       cursor: pointer;
+      border-radius: .3125rem;
       transition: all .3s;
 
       &:hover {
-        filter: brightness(0.8);
+        background: #ECEBF0;
+        color: #2E046D;
       }
 
       .iconWrapper {
@@ -36,7 +38,17 @@ aside.aside__content {
 
       &:first-child {
         background: #ECEBF0;
-        border-radius: .3125rem;
+        color: #2E046D;
+        font-weight: 600;
+
+        &:hover {
+          filter: brightness(0.8);
+        }
+      }
+
+      .arrowIcon {
+        margin-left: auto;
+        line-height: 0;
       }
     }
   }

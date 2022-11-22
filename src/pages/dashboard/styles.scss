@@ -1,0 +1,7 @@
+.main__content {
+  display: grid;
+  grid-template-columns: 15.25rem 1fr;
+  gap: 2rem;
+  height: calc(100vh - 4rem);
+  background: #DDDDDD;
+}
