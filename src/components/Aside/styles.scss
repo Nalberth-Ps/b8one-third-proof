@@ -1,0 +1,43 @@
+aside.aside__content {
+  max-width: 15.25rem;
+  padding: 1rem;
+
+  .navbar {
+    &__list {
+      display: flex;
+      flex-direction: column;
+      gap: .5rem;
+      list-style: none;
+    }
+
+    &__item {
+      display: flex;
+      align-items: center;
+      gap: .5rem;
+      padding: .75rem;
+      width: 13.25rem;
+      cursor: pointer;
+      transition: all .3s;
+
+      &:hover {
+        filter: brightness(0.8);
+      }
+
+      .iconWrapper {
+        line-height: 0;
+      }
+
+      .itemName {
+        font-weight: 500;
+        font-size: .875rem;
+        line-height: 1.25rem;
+        letter-spacing: -0.005em;
+      }
+
+      &:first-child {
+        background: #ECEBF0;
+        border-radius: .3125rem;
+      }
+    }
+  }
+}
