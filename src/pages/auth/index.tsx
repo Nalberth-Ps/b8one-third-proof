@@ -1,7 +1,10 @@
 // Dependencies
 import React, { useState } from 'react';
 import { useMutation } from '@apollo/client';
-import { useLocalStorage } from 'usehooks-ts'
+import { useHistory } from "react-router-dom";
+
+// Context
+import { useAuth } from '../../context/AuthenticationContext';
 
 // Mutations
 import { SIGN_IN } from '../../graphql/mutations';
@@ -15,18 +18,20 @@ import './styles.scss';
 export const AuthPage = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const [signInError, setSignInError] = useState(false);
-  const [userData, setUserData] = useLocalStorage('userData', {} as UserToken);
+  const { setUserData } = useAuth();
+  const history = useHistory();
 
-  const [signIn, { data, loading, error }] = useMutation<{ signIn: UserToken }, { input: SignIn }>(SIGN_IN);
+  const [signIn, { data, error }] = useMutation<{ signIn: UserToken }, { input: SignIn }>(SIGN_IN);
 
   const handleSubmit = async (event: React.SyntheticEvent) => {
     event.preventDefault();
     await signIn({ variables: { input: { email, password } } });
 
-    if (!data?.signIn || error) return setSignInError(true);
+    if (!data?.signIn || error) return;
 
     setUserData(data?.signIn);
+
+    history.push('/dashboard');
   };
 
   return (
