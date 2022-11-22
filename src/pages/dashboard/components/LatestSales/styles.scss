@@ -1,0 +1,35 @@
+.latestSales {
+  &__title {
+    font-weight: 500;
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .sealsContainer {
+    .seals {
+      &__row {
+        display: grid;
+        grid-template-columns: minmax(12.5rem, 30.5rem) repeat(3, minmax(6.25rem, 1fr)) 6.25rem;
+        align-items: center;
+        gap: 2rem;
+        padding: 1rem 0;
+      }
+
+      &__column {
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 16px;
+        color: #333333;
+      }
+
+      &__body {
+        p {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 20px;
+        }
+      }
+    }
+  }
+}
