@@ -1,29 +1,24 @@
 // Dependencies
-import React, { useContext } from "react";
+import React, { useContext } from 'react';
 import { useLocalStorage } from 'usehooks-ts';
-import { UserToken } from "../pages/typings/auth";
+import { UserToken } from '../pages/typings/auth';
 
-interface ContextProps {
-	userData: UserToken,
-	setUserData(user: UserToken): void
-}
+type ContextProps = {
+  userData: UserToken;
+  setUserData(user: UserToken): void;
+};
+
+type AuthenticationContextProviderProps = {
+  children: React.ReactNode;
+};
 
 export const AuthenticationContext = React.createContext<ContextProps>({} as ContextProps);
 
-
-type Props = {
-  children: React.ReactNode
-}
-
-const AuthenticationContextProvider: React.FC<Props> = ({ children }) => {
+const AuthenticationContextProvider: React.FC<AuthenticationContextProviderProps> = ({ children }) => {
   const [userData, setUserData] = useLocalStorage('userData', {} as UserToken);
 
-	return (
-		<AuthenticationContext.Provider value={{ userData, setUserData }}>
-			{children}
-		</AuthenticationContext.Provider>
-	)
-}
+  return <AuthenticationContext.Provider value={{ userData, setUserData }}>{children}</AuthenticationContext.Provider>;
+};
 
 export const useAuth = () => {
   const { userData, setUserData } = useContext(AuthenticationContext);
