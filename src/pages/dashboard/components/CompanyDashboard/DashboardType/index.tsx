@@ -3,12 +3,12 @@ import React from 'react';
 //Styles
 import './styles.scss';
 
-export const DashboardType = () => {
+export const DashboardTypeSelector = () => {
   return (
     <div className="dashboardType">
       <ul className="dashboardType__list">
         <li className="dashboardType__item">
-          <input type="radio" name="dashboardType" id="receita" checked/>
+          <input type="radio" name="dashboardType" id="receita" />
           <label htmlFor="receita">Receita</label>
         </li>
         <li className="dashboardType__item">

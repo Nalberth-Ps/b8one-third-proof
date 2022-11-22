@@ -3,7 +3,7 @@ import React from 'react'
 // Styles
 import './styles.scss'
 
-export const RevenueTime = () => {
+export const RevenuePeriodSelector = () => {
   return (
     <div className="revenueTime">
       <ul className="revenueTime__list">
@@ -24,8 +24,12 @@ export const RevenueTime = () => {
           <label htmlFor="1-month">1 mês</label>
         </li>
         <li className="revenueTime__item">
-          <input type="radio" name="revenueTime" id="1-year" />
+          <input type="radio" name="revenueTime" id="6-month" />
           <label htmlFor="6-month">6 mês</label>
+        </li>
+        <li className="revenueTime__item">
+          <input type="radio" name="revenueTime" id="1-year" />
+          <label htmlFor="1-year">1 ano</label>
         </li>
       </ul>
     </div>

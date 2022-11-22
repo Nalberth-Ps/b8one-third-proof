@@ -5,7 +5,7 @@ import { HeaderLogo } from './Logo';
 import './styles.scss';
 
 export const Header = () => {
-  const { userData } = useAuth();
+  const { name } = useAuth();
 
   return (
     <header className="header">
@@ -16,12 +16,12 @@ export const Header = () => {
 
       <nav className="userActions">
         <ul className="userActions__list">
-          {options.map(({ icon, isUserName }) => (
-          <li className="userActions__item">
+          {options.map(({ icon, isUserName }, index) => (
+          <li className="userActions__item" key={index}>
             <a href="#" className="userActions__link">
               {icon}
               {isUserName && (
-                <span className="userName">{userData?.user?.name}</span>
+                <span className="userName">{name}</span>
               )}
             </a>
           </li>

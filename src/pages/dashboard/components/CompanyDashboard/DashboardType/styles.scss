@@ -8,13 +8,15 @@
 
   &__item {
     position: relative;
-    padding: 0 1rem 1rem;
-
+    
     label {
+      display: block;
       font-weight: 700;
       font-size: 14px;
       line-height: 20px;
       letter-spacing: -0.005em;
+      padding: 0 1rem 1rem;
+      cursor: pointer;
     }
 
     input {

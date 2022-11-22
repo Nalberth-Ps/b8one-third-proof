@@ -9,6 +9,7 @@ import { useAuth } from '../../context/AuthenticationContext';
 import { Aside, Header } from '../../components';
 import { HelloMessage } from './components/HelloMessage';
 import { CompanyDashboard } from './components/CompanyDashboard';
+import { LatestSales } from './components/LatestSales';
 
 // Styles
 import './styles.scss';
@@ -28,6 +29,7 @@ export const Dashboard = () => {
         <main>
           <HelloMessage />
           <CompanyDashboard />
+          <LatestSales />
         </main>
       </div>
     </>

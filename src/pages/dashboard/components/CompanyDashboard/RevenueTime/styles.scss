@@ -1,15 +1,16 @@
 .revenueTime {
   &__list {
     display: flex;
-    gap: 1rem;
+    gap: .5rem;
     list-style: none;
-    margin: 1rem 0 0;
+    margin: 1rem 0 .75rem;
   }
 
   &__item {
     position: relative;
     
     label {
+      display: block;
       cursor: pointer;
       border-radius: .3125rem;
       background: #ecebf0;
