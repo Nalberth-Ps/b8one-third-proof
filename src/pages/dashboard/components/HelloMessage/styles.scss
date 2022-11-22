@@ -1,0 +1,19 @@
+.helloMessage {
+  margin-bottom: 2rem;
+
+  &__title {
+    font-weight: 600;
+    font-size: 2rem;
+    line-height: 2.5rem;
+    letter-spacing: -0.01em;
+    margin-bottom: .5rem;
+  }
+
+  &__description {
+    font-weight: 500;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    letter-spacing: -0.01em;
+    color: #555555;
+  }
+}

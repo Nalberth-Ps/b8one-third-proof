@@ -7,6 +7,7 @@ import { useAuth } from '../../context/AuthenticationContext';
 
 // Components
 import { Aside, Header } from '../../components';
+import { HelloMessage } from './components/HelloMessage';
 
 // Styles
 import './styles.scss';
@@ -24,7 +25,7 @@ export const Dashboard = () => {
       <div className="main__content">
         <Aside />
         <main>
-          <h1>Content</h1>
+          <HelloMessage />
         </main>
       </div>
     </>
